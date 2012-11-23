@@ -1,0 +1,3 @@
+= Redmine Progressive Projects List Plugin
+
+The plugin provides projects list with progress bars.
