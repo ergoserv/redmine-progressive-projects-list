@@ -1,0 +1,7 @@
+ul.progressive-project-menu {
+	padding-left: 0 !important;
+}
+ul.progressive-project-menu li {
+	float:left;
+	margin-right: 10px;
+}

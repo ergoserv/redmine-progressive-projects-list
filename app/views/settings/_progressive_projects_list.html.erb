@@ -1,0 +1,14 @@
+<div class="tabular settings">
+	<p>
+		<%= setting_label(:show_project_menu) %>
+		<%= check_box_tag('settings[show_project_menu]', true, @settings['show_project_menu']) %>
+	</p>
+	<p>
+		<%= setting_label(:show_project_description) %>
+		<%= check_box_tag('settings[show_project_description]', true, @settings['show_project_description']) %>
+	</p>
+	<p>
+		<%= setting_label(:show_project_progress) %>
+		<%= check_box_tag('settings[show_project_progress]', true, @settings['show_project_progress']) %>
+	</p>
+</div>

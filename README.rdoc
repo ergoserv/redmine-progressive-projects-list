@@ -1,3 +1,5 @@
 = Redmine Progressive Projects List Plugin
 
-The plugin provides projects list with progress bars.
+The plugin provides projects list with menus and progress bars for each project.
+
+Plugin page and screenshots - http://www.redmine.org/plugins/progressive-projects-list

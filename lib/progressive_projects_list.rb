@@ -10,7 +10,16 @@ module ProgressiveProjectsList
     def render_project_hierarchy_with_progress_bars(projects)
       render_project_nested_lists(projects) do |project|
         s = link_to_project(project, {}, :class => "#{project.css_classes} #{User.current.member_of?(project) ? 'my-project' : nil}")
-        s << render_project_progress_bars(project)
+        if Setting.plugin_progressive_projects_list['show_project_menu']
+          s << render_project_menu(project) + '<br />'.html_safe
+        end
+        if project.description.present? && Setting.plugin_progressive_projects_list['show_project_description']
+            s << content_tag('div', textilizable(project.short_description, :project => project), :class => 'wiki description')
+        end
+        if Setting.plugin_progressive_projects_list['show_project_progress']
+          s << render_project_progress_bars(project)
+        end
+        s
       end
     end
 
@@ -41,7 +50,13 @@ module ProgressiveProjectsList
       end
       s.html_safe
     end
+
+    def render_project_menu(project)
+      links = []
+      menu_items_for(:project_menu, project) do |node|
+        links << render_menu_node(node, project)
+      end
+      links.empty? ? nil : content_tag('ul', links.join("\n").html_safe, :class => 'progressive-project-menu')
+    end
   end
 end
-
-ProjectsHelper.send(:include, ProgressiveProjectsList)
