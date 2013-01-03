@@ -46,5 +46,4 @@ module ProgressiveProjectDecorator
       issues_progress(false) + issues_progress(true)
     end
   end
-
 end
