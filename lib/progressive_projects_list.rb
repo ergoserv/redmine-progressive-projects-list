@@ -25,13 +25,13 @@ module ProgressiveProjectsList
 
     # Returns project's and its versions' progress bars
     def render_project_progress_bars(project)
+      project.extend(ProgressiveProjectDecorator)
       s = ''
       if project.issues.open.count > 0
-        issues_closed_pourcent = (1 - project.issues.open.count.to_f/project.issues.count) * 100
         s << "<div>" + l(:label_issue_plural) + ": " +
-          link_to_if(project.issues.open.count > 0, l(:label_x_open_issues_abbr, :count => project.issues.open.count), :controller => 'issues', :action => 'index', :project_id => project, :set_filter => 1) +
+          link_to(l(:label_x_open_issues_abbr, :count => project.issues.open.count), :controller => 'issues', :action => 'index', :project_id => project, :set_filter => 1) +
           " <small>(" + l(:label_total) + ": #{project.issues.count})</small></div>" +
-          progress_bar(issues_closed_pourcent, :width => '30em', :legend => '%0.0f%' % issues_closed_pourcent)
+          progress_bar([project.issues_closed_percent, project.issues_completed_percent], :width => '30em', :legend => '%0.0f%' % project.issues_closed_percent)
       end
 
       unless project.versions.open.empty?
