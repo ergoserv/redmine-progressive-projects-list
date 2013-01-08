@@ -60,3 +60,7 @@ module ProgressiveProjectsList
     end
   end
 end
+
+unless ProjectsHelper.included_modules.include? ProgressiveProjectsList
+  ProjectsHelper.send(:include, ProgressiveProjectsList)
+end
