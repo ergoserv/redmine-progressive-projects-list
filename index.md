@@ -7,13 +7,9 @@ Features
 
 - Show overall projects status in progress bars
 - Quick links to issues, new issue, version, etc directly from the projects list
+- Show due date of the projects
 - Configurable
-
-Downloads
----------
-- [View or Fork On GitHub](https://github.com/stgeneral/redmine-progressive-projects-list)
-- [ZIP/master](https://github.com/stgeneral/redmine-progressive-projects-list/zipball/master)
-- [TAR/master](https://github.com/stgeneral/redmine-progressive-projects-list/tarball/master)
+- Compatible with Redmine 2.1, 2.2 and ChiliProject 3.4
 
 
 Screenshots
