@@ -13,6 +13,14 @@ Redmine::Plugin.register :progressive_projects_list do
   }, :partial => 'settings/progressive_projects_list'
 end
 
-require 'progressive_projects_list_listener'
-require 'progressive_projects_list'
-ProjectsHelper.send(:include, ProgressiveProjectsList)
+if Rails::VERSION::MAJOR >= 3
+  require 'progressive_projects_list_listener'
+  require 'progressive_projects_list'
+else
+  # Rails 2.x (ChiliProject) compatibility
+  require 'dispatcher'
+  Dispatcher.to_prepare :progressive_projects_list do
+    require_dependency 'progressive_projects_list'
+    require_dependency 'progressive/application_helper_patch'
+  end
+end
