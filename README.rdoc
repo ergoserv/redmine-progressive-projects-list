@@ -1,8 +1,10 @@
-= Redmine Progressive Projects List Plugin
+= Progressive Projects List
 
-The plugin provides projects list with menus and progress bars for each project.
+Projects list with blackjack and other features for Redmine and ChiliProject.
 
-Plugin page and screenshots - http://www.redmine.org/plugins/progressive-projects-list
+Compatible with Redmine 2.1, 2.2 and ChiliProject 3.4.
+
+Details and screenshots - http://stgeneral.github.com/redmine-progressive-projects-list/
 
 == Installation notes
 
