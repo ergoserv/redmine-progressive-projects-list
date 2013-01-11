@@ -1,4 +1,4 @@
-module ProgressiveProjectDecorator
+module Progressive::ProjectDecorator
   def issues_closed_percent
     if issues.count == 0
       0

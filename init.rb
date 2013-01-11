@@ -14,8 +14,8 @@ Redmine::Plugin.register :progressive_projects_list do
 end
 
 if Rails::VERSION::MAJOR >= 3
-  require 'progressive_projects_list_listener'
   require 'progressive_projects_list'
+  require 'progressive/projects_list_view_listener'
 else
   # Rails 2.x (ChiliProject) compatibility
   require 'dispatcher'
