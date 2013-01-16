@@ -2,6 +2,8 @@
 layout: default
 ---
 
+Latest version 0.2.0 released 2013-01-16.
+
 Features
 --------
 
@@ -19,6 +21,7 @@ Screenshots
 ![Projects list showing overall projects status with progress bars](images/screenshots/v020/progressive-projects-list-v020-progress.png)
 
 [View more screenshots...](screenshots.html)
+
 
 Installation notes
 ------------------
