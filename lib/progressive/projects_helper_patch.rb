@@ -7,16 +7,31 @@ module Progressive::ProjectsHelperPatch
   end
 
   module InstanceMethods
+    def progressive_setting(key)
+      if request.params[:progressive]
+        session[:progressive] = true
+        session[key] = request.params[key]
+      elsif session[:progressive]
+        session[key]
+      else
+        Setting.plugin_progressive_projects_list[key.to_s]
+      end
+    end
+
+    def progressive_setting?(key)
+      !progressive_setting(key).blank?
+    end
+
     def render_project_hierarchy_with_progress_bars(projects)
       render_project_nested_lists(projects) do |project|
         s = link_to_project(project, {}, :class => "#{project.css_classes} #{User.current.member_of?(project) ? 'my-project' : nil}")
-        if Setting.plugin_progressive_projects_list['show_project_menu']
+        if progressive_setting?(:show_project_menu)
           s << render_project_menu(project) + '<br />'.html_safe
         end
-        if project.description.present? && Setting.plugin_progressive_projects_list['show_project_description']
+        if project.description.present? && progressive_setting?(:show_project_description)
             s << content_tag('div', textilizable(project.short_description, :project => project), :class => 'wiki description')
         end
-        if Setting.plugin_progressive_projects_list['show_project_progress']
+        if progressive_setting?(:show_project_progress)
           s << render_project_progress_bars(project)
         end
         s
