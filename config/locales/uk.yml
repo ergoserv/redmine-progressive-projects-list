@@ -2,3 +2,4 @@ uk:
   setting_show_project_description: Показувати опис проектів
   setting_show_project_progress: Показувати прогрес проектів
   setting_show_project_menu: Показувати меню проектів
+  progressive_settings_hint: Налаштування за умовчанням. Користувачі мають можливість змінюваты їх на час сесіі
