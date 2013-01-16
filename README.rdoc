@@ -4,7 +4,7 @@ Projects list with blackjack and other features for Redmine and ChiliProject.
 
 Compatible with Redmine 2.1, 2.2 and ChiliProject 3.4.
 
-Details and screenshots - http://stgeneral.github.com/redmine-progressive-projects-list/
+Details and screenshots - http://stgeneral.github.com/redmine-progressive-projects-list.
 
 == Installation notes
 
