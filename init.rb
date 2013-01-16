@@ -15,12 +15,14 @@ end
 
 if Rails::VERSION::MAJOR >= 3
   require 'progressive_projects_list'
+  require 'progressive/projects_helper_patch'
   require 'progressive/projects_list_view_listener'
 else
   # Rails 2.x (ChiliProject) compatibility
   require 'dispatcher'
   Dispatcher.to_prepare :progressive_projects_list do
     require_dependency 'progressive_projects_list'
+    require_dependency 'progressive/projects_helper_patch'
     require_dependency 'progressive/application_helper_patch'
   end
 end
