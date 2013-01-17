@@ -2,3 +2,4 @@ de:
   setting_show_project_description: Projektbeschreibung anzeigen
   setting_show_project_progress: Projektfortschritt anzeigen
   setting_show_project_menu: Projketmenü anzeigen
+  progressive_settings_hint: Defaults settings. Users may override them per session.
