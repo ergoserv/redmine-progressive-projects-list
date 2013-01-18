@@ -46,7 +46,7 @@ module Progressive::ProjectsHelperPatch
         s << "<div>" + l(:label_issue_plural) + ": " +
           link_to(l(:label_x_open_issues_abbr, :count => project.issues.open.count), :controller => 'issues', :action => 'index', :project_id => project, :set_filter => 1) +
           " <small>(" + l(:label_total) + ": #{project.issues.count})</small> "
-        s << due_date_distance_in_words(project.due_date) if project.due_date
+        s << due_date_tag(project.due_date) if project.due_date
         s << "</div>"
         s << progress_bar([project.issues_closed_percent, project.issues_completed_percent], :width => '30em', :legend => '%0.0f%' % project.issues_closed_percent)
       end
@@ -58,7 +58,7 @@ module Progressive::ProjectsHelperPatch
             s << l(:label_version) + " " + link_to_version(version) + ": " +
               link_to(l(:label_x_open_issues_abbr, :count => version.open_issues_count), :controller => 'issues', :action => 'index', :project_id => version.project, :status_id => 'o', :fixed_version_id => version, :set_filter => 1) +
               "<small> / " + link_to_if(version.closed_issues_count > 0, l(:label_x_closed_issues_abbr, :count => version.closed_issues_count), :controller => 'issues', :action => 'index', :project_id => version.project, :status_id => 'c', :fixed_version_id => version, :set_filter => 1) + "</small>" + ". "
-            s << due_date_distance_in_words(version.effective_date) if version.effective_date
+            s << due_date_tag(version.effective_date) if version.effective_date
             s << "<br>" +
               progress_bar([version.closed_pourcent, version.completed_pourcent], :width => '30em', :legend => ('%0.0f%' % version.completed_pourcent))
           end
@@ -74,6 +74,10 @@ module Progressive::ProjectsHelperPatch
         links << render_menu_node(node, project)
       end
       links.empty? ? nil : content_tag('ul', links.join("\n").html_safe, :class => 'progressive-project-menu')
+    end
+
+    def due_date_tag(date)
+      content_tag(:time, due_date_distance_in_words(date), :class => (date < Date.today ? 'overdue' : nil), :title => date)
     end
   end
 end
