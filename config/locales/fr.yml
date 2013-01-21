@@ -1,0 +1,5 @@
+fr:
+  setting_show_project_description: Afficher la description des projets
+  setting_show_project_progress: Afficher la progression des projets
+  setting_show_project_menu: Afficher le menu des projets
+  progressive_settings_hint: Configuration par défaut. Les utilisateurs peuvent la modifier pendant leur session courante.
