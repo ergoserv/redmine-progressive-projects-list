@@ -9,3 +9,7 @@ ul.progressive-project-menu li {
 time.overdue {
 	color: red;
 }
+
+div.child a.project {
+	font-weight: bold;
+}
