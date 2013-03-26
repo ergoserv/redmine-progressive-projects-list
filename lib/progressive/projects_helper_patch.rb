@@ -31,7 +31,7 @@ module Progressive::ProjectsHelperPatch
         if project.description.present? && progressive_setting?(:show_project_description)
             s << content_tag('div', textilizable(project.short_description, :project => project), :class => 'wiki description')
         end
-        if progressive_setting?(:show_project_progress)
+        if progressive_setting?(:show_project_progress) && User.current.allowed_to?(:view_issues, project)
           s << render_project_progress_bars(project)
         end
         s
