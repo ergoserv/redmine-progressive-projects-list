@@ -8,4 +8,19 @@
 
 	<p><%= submit_tag l(:button_apply), :class => 'button-small', :name => nil %></p>
 	<% end %>
+<% elsif params[:action] == 'show' %>
+	<%= form_tag({}, :method => :get) do %>
+	<h3><%= l(:label_preferences) %></h3>
+	<%= hidden_field_tag(:progressive, 1) %>
+	<label for="show_project_progress">
+		<%= select_tag(:show_project_progress_overview,
+			options_for_select([
+				[l(:general_text_No), ''],
+				[l(:progressive_option_left), 'left'],
+				[l(:progressive_option_right), 'right']],
+			progressive_setting(:show_project_progress_overview))) %>
+			<%= l(:setting_show_project_progress) %></label>
+
+	<p><%= submit_tag l(:button_apply), :class => 'button-small', :name => nil %></p>
+	<% end %>
 <% end %>
