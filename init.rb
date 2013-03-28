@@ -1,3 +1,7 @@
+unless File.basename(File.dirname(__FILE__)) == 'progressive_projects_list'
+  raise "Progressive Project List plugin directory should be 'progressive_projects_list' instead of '#{File.basename(File.dirname(__FILE__))}'"
+end
+
 Redmine::Plugin.register :progressive_projects_list do
   name 'Progressive Projects List plugin'
   author 'Dmitry Babenko'
