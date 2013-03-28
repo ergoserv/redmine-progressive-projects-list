@@ -4,6 +4,6 @@ uk:
   setting_show_project_progress_overview: Показувати прогрес на сторіниці проекту
   setting_show_project_menu: Показувати меню проектів
   progressive_settings_hint: Налаштування за умовчанням. Користувачі мають можливість змінюваты їх на час сесіі
-  label_project_progress: Прогрес проекту
+  label_progress: Прогрес
   progressive_option_left: Ліворуч
   progressive_option_right: Праворуч
