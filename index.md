@@ -12,7 +12,7 @@ Features
 - Quick links to issues, new issue, version, etc directly from the projects list
 - Show due date of the projects and versions
 - Configurable: admin set default settings, user may override them per session
-- Compatible with [Redmine](http://www.redmine.org/) 2.1, 2.2 and [ChiliProject](https://www.chiliproject.org/) 3.4
+- Compatible with [Redmine](http://www.redmine.org/) 2.1, 2.2, 2.3 and [ChiliProject](https://www.chiliproject.org/) 3.4
 - Translated into English, Russian, Ukrainian, German
 
 
