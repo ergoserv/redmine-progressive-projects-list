@@ -14,4 +14,14 @@
 		<%= setting_label(:show_project_progress) %>
 		<%= check_box_tag('settings[show_project_progress]', true, @settings['show_project_progress']) %>
 	</p>
+	<p>
+		<%= setting_label(:show_project_progress_overview) %>
+		<%= select_tag('settings[show_project_progress_overview]',
+			options_for_select([
+				[l(:general_text_No), ''],
+				[l(:progressive_option_left), 'left'],
+				[l(:progressive_option_right), 'right']],
+			@settings['show_project_progress_overview'])) %>
+	</p>
+
 </div>

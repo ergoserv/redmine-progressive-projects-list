@@ -1,0 +1,6 @@
+<% if User.current.allowed_to?(:view_issues, @project) && @project.issues.open.any? && progressive_setting(:show_project_progress_overview) == side.to_s %>
+<div class="progress box">
+	<h3><%=l(:label_progress)%></h3>
+	<%= render_project_progress_bars(@project) %>
+</div>
+<% end %>

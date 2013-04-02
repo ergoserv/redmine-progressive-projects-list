@@ -19,7 +19,7 @@ module Progressive::ProjectsHelperPatch
     end
 
     def progressive_setting?(key)
-      !progressive_setting(key).blank?
+      progressive_setting(key).present?
     end
 
     def render_project_hierarchy_with_progress_bars(projects)
@@ -29,9 +29,9 @@ module Progressive::ProjectsHelperPatch
           s << render_project_menu(project) + '<br />'.html_safe
         end
         if project.description.present? && progressive_setting?(:show_project_description)
-            s << content_tag('div', textilizable(project.short_description, :project => project), :class => 'wiki description')
+          s << content_tag('div', textilizable(project.short_description, :project => project), :class => 'wiki description')
         end
-        if progressive_setting?(:show_project_progress)
+        if progressive_setting?(:show_project_progress) && User.current.allowed_to?(:view_issues, project)
           s << render_project_progress_bars(project)
         end
         s
@@ -42,7 +42,7 @@ module Progressive::ProjectsHelperPatch
     def render_project_progress_bars(project)
       project.extend(Progressive::ProjectDecorator)
       s = ''
-      if project.issues.open.count > 0
+      if project.issues.open.any?
         s << "<div>" + l(:label_issue_plural) + ": " +
           link_to(l(:label_x_open_issues_abbr, :count => project.issues.open.count), :controller => 'issues', :action => 'index', :project_id => project, :set_filter => 1) +
           " <small>(" + l(:label_total) + ": #{project.issues.count})</small> "
@@ -51,17 +51,16 @@ module Progressive::ProjectsHelperPatch
         s << progress_bar([project.issues_closed_percent, project.issues_completed_percent], :width => '30em', :legend => '%0.0f%' % project.issues_closed_percent)
       end
 
-      unless project.versions.open.empty?
+      if project.versions.open.any?
         s << "<div>"
         project.versions.open.reverse_each do |version|
-          unless version.completed?
-            s << l(:label_version) + " " + link_to_version(version) + ": " +
-              link_to(l(:label_x_open_issues_abbr, :count => version.open_issues_count), :controller => 'issues', :action => 'index', :project_id => version.project, :status_id => 'o', :fixed_version_id => version, :set_filter => 1) +
-              "<small> / " + link_to_if(version.closed_issues_count > 0, l(:label_x_closed_issues_abbr, :count => version.closed_issues_count), :controller => 'issues', :action => 'index', :project_id => version.project, :status_id => 'c', :fixed_version_id => version, :set_filter => 1) + "</small>" + ". "
-            s << due_date_tag(version.effective_date) if version.effective_date
-            s << "<br>" +
-              progress_bar([version.closed_pourcent, version.completed_pourcent], :width => '30em', :legend => ('%0.0f%' % version.completed_pourcent))
-          end
+          next if version.completed?
+          s << l(:label_version) + " " + link_to_version(version) + ": " +
+            link_to(l(:label_x_open_issues_abbr, :count => version.open_issues_count), :controller => 'issues', :action => 'index', :project_id => version.project, :status_id => 'o', :fixed_version_id => version, :set_filter => 1) +
+            "<small> / " + link_to_if(version.closed_issues_count > 0, l(:label_x_closed_issues_abbr, :count => version.closed_issues_count), :controller => 'issues', :action => 'index', :project_id => version.project, :status_id => 'c', :fixed_version_id => version, :set_filter => 1) + "</small>" + ". "
+          s << due_date_tag(version.effective_date) if version.effective_date
+          s << "<br>" +
+            progress_bar([version.closed_pourcent, version.completed_pourcent], :width => '30em', :legend => ('%0.0f%' % version.completed_pourcent))
         end
         s << "</div>"
       end
