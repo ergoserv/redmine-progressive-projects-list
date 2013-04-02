@@ -2,12 +2,13 @@
 layout: default
 ---
 
-Latest version 0.2.1 released 2013-03-12.
+Latest version 0.3.0 released 2013-04-02.
 
 Features
 --------
 
 - Show overall projects status in progress bars
+- Show project status in progress bars at project overview page
 - Quick links to issues, new issue, version, etc directly from the projects list
 - Show due date of the projects and versions
 - Configurable: admin set default settings, user may override them per session
