@@ -3,6 +3,7 @@ en:
   setting_show_project_progress: Show projects' progress
   setting_show_project_progress_overview: Show progress on overview page
   setting_show_project_menu: Show projects' menu
+  setting_show_only_for_my_projects: Show only for my projects
   progressive_settings_hint: Defaults settings. Users may override them per session.
   label_progress: Progress
   progressive_option_left: Left

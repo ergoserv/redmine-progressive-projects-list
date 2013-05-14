@@ -25,14 +25,16 @@ module Progressive::ProjectsHelperPatch
     def render_project_hierarchy_with_progress_bars(projects)
       render_project_nested_lists(projects) do |project|
         s = link_to_project(project, {}, :class => "#{project.css_classes} #{User.current.member_of?(project) ? 'my-project' : nil}")
-        if progressive_setting?(:show_project_menu)
-          s << render_project_menu(project) + '<br />'.html_safe
-        end
-        if project.description.present? && progressive_setting?(:show_project_description)
-          s << content_tag('div', textilizable(project.short_description, :project => project), :class => 'wiki description')
-        end
-        if progressive_setting?(:show_project_progress) && User.current.allowed_to?(:view_issues, project)
-          s << render_project_progress_bars(project)
+        if !progressive_setting?(:show_only_for_my_projects) || User.current.member_of?(project)
+          if progressive_setting?(:show_project_menu)
+            s << render_project_menu(project) + '<br />'.html_safe
+          end
+          if project.description.present? && progressive_setting?(:show_project_description)
+            s << content_tag('div', textilizable(project.short_description, :project => project), :class => 'wiki description')
+          end
+          if progressive_setting?(:show_project_progress) && User.current.allowed_to?(:view_issues, project)
+            s << render_project_progress_bars(project)
+          end
         end
         s
       end

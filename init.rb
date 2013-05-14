@@ -11,9 +11,10 @@ Redmine::Plugin.register :progressive_projects_list do
   author_url 'https://github.com/stgeneral'
 
   settings :default => {
-    'show_project_description' => false,
-    'show_project_progress'    => true,
-    'show_project_menu'        => false,
+    'show_project_description'  => false,
+    'show_project_progress'     => true,
+    'show_project_menu'         => false,
+    'show_only_for_my_projects' => false,
     'show_project_progress_overview' => ''
   }, :partial => 'settings/progressive_projects_list'
 end

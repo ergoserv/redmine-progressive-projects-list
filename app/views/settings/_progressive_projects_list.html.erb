@@ -1,11 +1,9 @@
 <p><%= t :progressive_settings_hint %></p>
 <div class="tabular settings">
-<% if Rails::VERSION::MAJOR >= 3 %>
 	<p>
 		<%= setting_label(:show_project_menu) %>
 		<%= check_box_tag('settings[show_project_menu]', true, @settings['show_project_menu']) %>
 	</p>
-<% end %>
 	<p>
 		<%= setting_label(:show_project_description) %>
 		<%= check_box_tag('settings[show_project_description]', true, @settings['show_project_description']) %>
@@ -13,6 +11,10 @@
 	<p>
 		<%= setting_label(:show_project_progress) %>
 		<%= check_box_tag('settings[show_project_progress]', true, @settings['show_project_progress']) %>
+	</p>
+	<p>
+		<%= setting_label(:show_only_for_my_projects) %>
+		<%= check_box_tag('settings[show_only_for_my_projects]', true, @settings['show_only_for_my_projects']) %>
 	</p>
 	<p>
 		<%= setting_label(:show_project_progress_overview) %>
@@ -23,5 +25,4 @@
 				[l(:progressive_option_right), 'right']],
 			@settings['show_project_progress_overview'])) %>
 	</p>
-
 </div>
