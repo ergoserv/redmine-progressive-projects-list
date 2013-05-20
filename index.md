@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Latest version 0.3.0 released 2013-04-02.
+Latest version 0.4.0 released 2013-05-20.
 
 Features
 --------
