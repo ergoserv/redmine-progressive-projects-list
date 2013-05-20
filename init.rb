@@ -23,6 +23,7 @@ if Rails::VERSION::MAJOR >= 3
   require 'progressive_projects_list'
   require 'progressive/projects_helper_patch'
   require 'progressive/projects_list_view_listener'
+  require 'progressive/recent_projects_view_listener'
 else
   # Rails 2.x (ChiliProject) compatibility
   require 'dispatcher'

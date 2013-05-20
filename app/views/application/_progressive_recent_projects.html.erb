@@ -1,0 +1,15 @@
+<%
+session[:recent_projects] ||= []
+if project
+  session[:recent_projects].delete(project.id)
+  session[:recent_projects].unshift(project.id).slice!(5)
+end
+
+if session[:recent_projects].any? %>
+<h3><%= l(:label_recent_projects) %></h3>
+<ul>
+	<% session[:recent_projects].each do |recent_project| %>
+	<li><%= link_to_project Project.find(recent_project), {:jump => current_menu_item} %></li>
+	<% end %>
+</ul>
+<% end %>
