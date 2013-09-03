@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Latest version 0.4.0 released 2013-05-20.
+Latest version 0.5.0 released 2013-05-20.
 
 Features
 --------
@@ -11,6 +11,7 @@ Features
 - Show project status in progress bars at project overview page
 - Quick links to issues, new issue, version, etc directly from the projects list
 - Show due date of the projects and versions
+- Recently viewed projects sidebar block
 - Configurable: admin set default settings, user may override them per session
 - Compatible with [Redmine](http://www.redmine.org/) 2.1, 2.2, 2.3 and [ChiliProject](https://www.chiliproject.org/) 3.4
 - Translated into English, Russian, Ukrainian, German, French
