@@ -6,7 +6,7 @@ Redmine::Plugin.register :progressive_projects_list do
   name 'Progressive Projects List plugin'
   author 'Dmitry Babenko'
   description 'Projects List with menus and progress bars.'
-  version '0.4.0'
+  version '0.5.0'
   url 'http://stgeneral.github.io/redmine-progressive-projects-list/'
   author_url 'https://github.com/stgeneral'
 
