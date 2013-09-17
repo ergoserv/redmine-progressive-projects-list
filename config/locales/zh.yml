@@ -1,0 +1,15 @@
+# Simplified Chinese strings go here for Rails i18n
+# Author: Steven.W
+# Based on file: en.yml
+
+zh:
+  setting_show_project_description: 显示项目描述
+  setting_show_project_progress: 显示项目进度
+  setting_show_project_progress_overview: 在概览页面显示项目进度
+  setting_show_project_menu: 显示项目菜单
+  setting_show_only_for_my_projects: 只显示我参与的项目
+  progressive_settings_hint: 默认设置。用户在每次会话时可进行覆盖。
+  label_progress: 进度
+  progressive_option_left: 左
+  progressive_option_right: 右
+  label_recent_projects: 最近查看的项目
