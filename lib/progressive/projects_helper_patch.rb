@@ -83,6 +83,6 @@ module Progressive::ProjectsHelperPatch
   end
 end
 
-unless ProjectsHelper.included_modules.include? Progressive::ProjectsHelperPatch
+unless ProjectsHelper.include? Progressive::ProjectsHelperPatch
   ProjectsHelper.send(:include, Progressive::ProjectsHelperPatch)
 end

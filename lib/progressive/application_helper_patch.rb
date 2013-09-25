@@ -39,6 +39,6 @@ module Progressive::ApplicationHelperPatch
   end
 end
 
-unless ApplicationHelper.included_modules.include? Progressive::ApplicationHelperPatch
+unless ApplicationHelper.include? Progressive::ApplicationHelperPatch
   ApplicationHelper.send(:include, Progressive::ApplicationHelperPatch)
 end
