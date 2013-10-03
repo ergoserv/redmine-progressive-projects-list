@@ -3,3 +3,6 @@ fr:
   setting_show_project_progress: Afficher la progression des projets
   setting_show_project_menu: Afficher le menu des projets
   progressive_settings_hint: Configuration par défaut. Les utilisateurs peuvent la modifier pendant leur session courante.
+  label_progress: Progrès
+  progressive_option_left: à gauche
+  progressive_option_right: à droite
