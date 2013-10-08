@@ -7,7 +7,7 @@ Projects list with blackjack and other features for [Redmine](http://www.redmine
 This is a fork which is based on stgeneral's version [View it on gitHub](https://github.com/stgeneral/redmine-progressive-projects-list). This fork adds some additonal features.
 
 * Add CSS ID to menu "recently viewed projects" for better template manipulation behavior.
-* Add a feature for hiding public projects from the project view
+* Hiding public projects from the project view (feature)
 * Pull Request 22 of stgeneral's github repository is integrated
 * Pull Request 21 of stgeneral's github repository is integrated
 
