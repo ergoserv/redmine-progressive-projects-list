@@ -2,10 +2,15 @@
 	<%= form_tag({}, :method => :get) do %>
 	<h3><%= l(:label_preferences) %></h3>
 	<%= hidden_field_tag(:progressive, 1) %>
-	<label for="show_project_menu"><%= check_box_tag 'show_project_menu', 1, progressive_setting?(:show_project_menu) %> <%= l(:setting_show_project_menu) %></label><br />
-	<label for="show_project_description"><%= check_box_tag 'show_project_description', 1, progressive_setting?(:show_project_description) %> <%= l(:setting_show_project_description) %></label><br />
-	<label for="show_project_progress"><%= check_box_tag 'show_project_progress', 1, progressive_setting?(:show_project_progress) %> <%= l(:setting_show_project_progress) %></label><br />
-	<label for="show_only_for_my_projects"><%= check_box_tag 'show_only_for_my_projects', 1, progressive_setting?(:show_only_for_my_projects) %> <%= l(:setting_show_only_for_my_projects) %></label>
+	<%= check_box_tag 'show_project_menu', 1, progressive_setting?(:show_project_menu) %>
+	<%= label_tag "show_project_menu", l(:setting_show_project_menu) %><br />
+	<%= check_box_tag 'show_project_description', 1, progressive_setting?(:show_project_description) %>
+	<%= label_tag "show_project_description", l(:setting_show_project_description) %><br />
+	<%= check_box_tag 'show_project_progress', 1, progressive_setting?(:show_project_progress) %>
+	<%= label_tag "show_project_progress", l(:setting_show_project_progress) %><br />
+	<%= check_box_tag 'show_only_for_my_projects', 1, progressive_setting?(:show_only_for_my_projects) %>
+	<%= label_tag "show_only_for_my_projects", l(:setting_show_only_for_my_projects)  %>
+	
 
 	<p><%= submit_tag l(:button_apply), :class => 'button-small', :name => nil %></p>
 	<% end %>
