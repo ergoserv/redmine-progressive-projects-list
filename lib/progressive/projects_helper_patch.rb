@@ -22,6 +22,44 @@ module Progressive::ProjectsHelperPatch
       progressive_setting(key).present?
     end
 
+  # Renders a tree of projects as a nested set of unordered lists
+  # The given collection may be a subset of the whole project tree
+  # (eg. some intermediate nodes are private and can not be seen)
+  def render_project_nested_lists(projects)
+    s = ''
+#    if progressive_setting?(:show_public_projects) || !@project.is_public
+    if projects.any? 
+      ancestors = []
+      original_project = @project
+      projects.sort_by(&:lft).each do |project|
+        if progressive_setting?(:show_public_projects) || !project.is_public
+          # set the project environment to please macros.
+          @project = project
+          if (ancestors.empty? || project.is_descendant_of?(ancestors.last))
+            s << "<ul class='projects #{ ancestors.empty? ? 'root' : nil}'>\n"
+          else
+            ancestors.pop
+            s << "</li>"
+            while (ancestors.any? && !project.is_descendant_of?(ancestors.last))
+              ancestors.pop
+              s << "</ul></li>\n"
+            end
+          end
+          classes = (ancestors.empty? ? 'root' : 'child')
+          s << "<li class='#{classes}'><div class='#{classes}'>"
+          s << h(block_given? ? yield(project) : project.name)
+          s << "</div>\n"
+          ancestors << project
+        end
+      end
+      s << ("</li></ul>\n" * ancestors.size)
+      @project = original_project
+    end
+    s.html_safe
+  end
+
+
+
     def render_project_hierarchy_with_progress_bars(projects)
       render_project_nested_lists(projects) do |project|
         s = link_to_project(project, {}, :class => "#{project.css_classes} #{User.current.member_of?(project) ? 'my-project' : nil}")
@@ -50,7 +88,7 @@ module Progressive::ProjectsHelperPatch
           " <small>(" + l(:label_total) + ": #{project.issues.count})</small> "
         s << due_date_tag(project.due_date) if project.due_date
         s << "</div>"
-        s << progress_bar([project.issues_closed_percent, project.issues_completed_percent], :width => '30em', :legend => '%0.0f%' % project.issues_closed_percent)
+        s << progress_bar([project.issues_closed_percent, project.issues_completed_percent], :width => '25em', :legend => '%0.0f%' % project.issues_closed_percent)
       end
 
       if project.versions.open.any?
@@ -62,7 +100,7 @@ module Progressive::ProjectsHelperPatch
             "<small> / " + link_to_if(version.closed_issues_count > 0, l(:label_x_closed_issues_abbr, :count => version.closed_issues_count), :controller => 'issues', :action => 'index', :project_id => version.project, :status_id => 'c', :fixed_version_id => version, :set_filter => 1) + "</small>" + ". "
           s << due_date_tag(version.effective_date) if version.effective_date
           s << "<br>" +
-            progress_bar([version.closed_pourcent, version.completed_pourcent], :width => '30em', :legend => ('%0.0f%' % version.completed_pourcent))
+            progress_bar([version.closed_pourcent, version.completed_pourcent], :width => '25em', :legend => ('%0.0f%' % version.completed_pourcent))
         end
         s << "</div>"
       end

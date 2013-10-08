@@ -17,6 +17,10 @@
 		<%= check_box_tag('settings[show_only_for_my_projects]', true, @settings['show_only_for_my_projects']) %>
 	</p>
 	<p>
+                <%= setting_label(:show_public_projects) %>
+                <%= check_box_tag('settings[show_public_projects]', true, @settings['show_public_projects']) %>
+        </p>
+        <p>
 		<%= setting_label(:show_project_progress_overview) %>
 		<%= select_tag('settings[show_project_progress_overview]',
 			options_for_select([
