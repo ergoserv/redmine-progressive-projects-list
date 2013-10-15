@@ -35,4 +35,5 @@ Other installation instructions are generic and can be found at [Redmine Plugins
 Links
 -----
 
+- [Redmine Progressive Theme](http://stgeneral.github.io/redmine-progressive-theme/)
 - [Plugin page @ Redmine.org](http://www.redmine.org/plugins/progressive-projects-list)
