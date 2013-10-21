@@ -46,4 +46,13 @@ module Progressive::ProjectDecorator
       issues_progress(false) + issues_progress(true)
     end
   end
+
+  # The latest due date of an *open* issue or version
+  def opened_due_date
+    @opened_due_date ||= [
+     issues.open.maximum('due_date'),
+     shared_versions.maximum('effective_date'),
+     Issue.fixed_version(shared_versions).maximum('due_date')
+    ].compact.max
+  end
 end
