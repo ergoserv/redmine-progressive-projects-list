@@ -78,7 +78,7 @@ module Progressive::ProjectsHelperPatch
     end
 
     def due_date_tag(date)
-      content_tag(:time, due_date_distance_in_words(date), :class => (date < Date.today ? 'overdue' : nil), :title => date)
+      content_tag(:time, due_date_distance_in_words(date), :class => (date < Date.today ? 'progressive-overdue' : nil), :title => date)
     end
   end
 end
