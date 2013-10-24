@@ -6,6 +6,7 @@ if project
 end
 
 if session[:recent_projects].any? %>
+<div class="progressive-recently-viewed-projects">
 <h3><%= l(:label_recent_projects) %></h3>
 <ul>
 	<% session[:recent_projects].each do |recent_project_id| %>
@@ -14,4 +15,5 @@ if session[:recent_projects].any? %>
 	<li><%= link_to_project recent_project, {:jump => current_menu_item} %></li>
 	<% end %>
 </ul>
+</div>
 <% end %>
