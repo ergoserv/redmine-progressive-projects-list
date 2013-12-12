@@ -32,8 +32,9 @@ Plugin's directory should be named `progressive_projects_list` exactly.
 Other installation instructions are generic and can be found at [Redmine Plugins page](http://www.redmine.org/projects/redmine/wiki/Plugins).
 
 
-Links
------
+Other Proressive plugins for Redmine
+------------------------------------
 
-- [Redmine Progressive Theme](http://stgeneral.github.io/redmine-progressive-theme/)
-- [Plugin page @ Redmine.org](http://www.redmine.org/plugins/progressive-projects-list)
+* [Progressive Projects List](http://stgeneral.github.io/redmine-progressive-projects-list/) - overall projects status on one page.
+* [Progressive Redmine Theme](http://stgeneral.github.io/redmine-progressive-theme/) - extends default theme with some nice features.
+* [Progressive Gantt Mods](https://github.com/stgeneral/redmine-progressive-gantt-mods) - assignee column and some preferences for Gantt chart.
