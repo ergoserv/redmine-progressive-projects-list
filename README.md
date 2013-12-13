@@ -13,7 +13,7 @@ Installation notes
 Plugin's directory should be named progressive_projects_list exactly.
 Other installation instructions are generic and can be found at Redmine Plugins page - http://www.redmine.org/projects/redmine/wiki/Plugins
 
-Compatible with Redmine 2.1, 2.2, 2.3 and ChiliProject 3.4.
+Compatible with Redmine 2.4, 2.3, 2.2, 2.1 and ChiliProject 3.4.
 
 Other Proressive plugins for Redmine
 ------------------------------------
