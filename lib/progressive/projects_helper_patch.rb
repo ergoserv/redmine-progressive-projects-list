@@ -1,12 +1,7 @@
 module Progressive::ProjectsHelperPatch
   def self.included(base) # :nodoc:
-    base.send(:include, InstanceMethods)
     base.class_eval do
-      alias_method_chain :render_project_hierarchy, :progress_bars
-    end
-  end
 
-  module InstanceMethods
     def progressive_setting(key)
       if request.params[:progressive]
         session[:progressive] = true
@@ -79,6 +74,9 @@ module Progressive::ProjectsHelperPatch
 
     def due_date_tag(date)
       content_tag(:time, due_date_distance_in_words(date), :class => (date < Date.today ? 'progressive-overdue' : nil), :title => date)
+    end
+
+      alias_method_chain :render_project_hierarchy, :progress_bars
     end
   end
 end
