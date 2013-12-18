@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Latest version 0.5.1 released 2013-09-17.
+Latest version 1.0.0 released 2013-12-18.
 
 Features
 --------
@@ -13,8 +13,7 @@ Features
 - Show due date of the projects and versions
 - Recently viewed projects sidebar block
 - Configurable: admin set default settings, user may override them per session
-- Compatible with [Redmine](http://www.redmine.org/) 2.4, 2.3, 2.2, 2.1 and [ChiliProject](https://www.chiliproject.org/) 3.4
-- Translated into English, Russian, Ukrainian, German, French
+- Translated into 7 languages: English, German, French, Italian, Simplified Chinese, Russian, Ukrainian.
 
 
 Screenshots
@@ -30,6 +29,9 @@ Installation notes
 
 Plugin's directory should be named `progressive_projects_list` exactly.
 Other installation instructions are generic and can be found at [Redmine Plugins page](http://www.redmine.org/projects/redmine/wiki/Plugins).
+
+Compatible with Redmine 2.4, 2.3, 2.2, 2.1.
+For ChiliProject 3.4 use [version 0.5.1](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v0.5.1).
 
 
 Other Proressive plugins for Redmine
