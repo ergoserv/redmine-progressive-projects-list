@@ -1,7 +1,7 @@
 Progressive Projects List
 =========================
 
-Projects list with blackjack and other features for [Redmine](http://www.redmine.org/).
+Plugin loads [Redmine](http://www.redmine.org/)'s projects list with overall projects status.
 
 Features
 --------
@@ -21,9 +21,13 @@ More details and screenshots - http://stgeneral.github.io/redmine-progressive-pr
 Installation notes
 ------------------
 
-Plugin's directory should be named `progressive_projects_list` exactly.
+1. Download [latest release](https://github.com/stgeneral/redmine-progressive-projects-list/releases/latest) of the plugin.
+2. Extract it to `<redmine_path>/plugins`. You should get `<redmine_path>/plugins/progressive_projects_list` directory.
+3. Restart Redmine.
 
-Other installation instructions are generic and can be found at [Redmine Plugins page](http://www.redmine.org/projects/redmine/wiki/Plugins).
+You should now be able to see the plugin list in _Administration -> Plugins_ and configure it.
+
+Generic instructions for installin/uninstalling plugins can be found at [Redmine Plugins page](http://www.redmine.org/projects/redmine/wiki/Plugins).
 
 Compatible with Redmine 2.4, 2.3, 2.2, 2.1.
 For ChiliProject 3.4 use [version 0.5.1](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v0.5.1).
