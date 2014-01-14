@@ -27,7 +27,7 @@ Installation notes
 
 You should now be able to see the plugin list in _Administration -> Plugins_ and configure it.
 
-Generic instructions for installin/uninstalling plugins can be found at [Redmine Plugins page](http://www.redmine.org/projects/redmine/wiki/Plugins).
+Generic instructions for installing/uninstalling plugins can be found at [Redmine Plugins page](http://www.redmine.org/projects/redmine/wiki/Plugins).
 
 Compatible with Redmine 2.4, 2.3, 2.2, 2.1.
 For ChiliProject 3.4 use [version 0.5.1](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v0.5.1).
