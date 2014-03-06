@@ -30,7 +30,7 @@ Installation notes
 Plugin's directory should be named `progressive_projects_list` exactly.
 Other installation instructions are generic and can be found at [Redmine Plugins page](http://www.redmine.org/projects/redmine/wiki/Plugins).
 
-Compatible with Redmine 2.4, 2.3, 2.2, 2.1.
+Compatible with Redmine 2.5, 2.4, 2.3, 2.2, 2.1.
 For ChiliProject 3.4 use [version 0.5.1](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v0.5.1).
 
 
