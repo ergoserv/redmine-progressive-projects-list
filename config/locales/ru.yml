@@ -3,7 +3,7 @@ ru:
   setting_show_project_progress: Показывать прогресс проектов
   setting_show_project_progress_overview: Показывать прогресс на странице проекта
   setting_show_project_menu: Показывать меню проектов
-  setting_show_only_for_my_projects: Показвать только для моих проектов
+  setting_show_only_for_my_projects: Показывать только для моих проектов
   progressive_settings_hint: Настройки по умолчанию. Пользователи могут переопределять их на время сессии.
   label_progress: Прогресс
   progressive_option_left: Слева
