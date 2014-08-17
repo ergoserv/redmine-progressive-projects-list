@@ -1,9 +1,9 @@
 Progressive Projects List
 =========================
 
-Plugin loads [Redmine](http://www.redmine.org/)'s projects list with overall projects status.
-
 [![Rate at redmine.org](http://img.shields.io/badge/rate%20at-redmine.org-blue.svg?style=flat)](http://www.redmine.org/plugins/progressive-projects-list)
+
+Plugin loads [Redmine](http://www.redmine.org/)'s projects list with overall projects status.
 
 
 Features
