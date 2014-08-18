@@ -1,0 +1,12 @@
+# Traitional Chinese translation by @samtptw
+zh-TW:
+  setting_show_project_description: 顯示專案說明
+  setting_show_project_progress: 顯示專案進度
+  setting_show_project_progress_overview: 在概覽頁面顯示專案進度
+  setting_show_project_menu: 顯示專案選單
+  setting_show_only_for_my_projects: 只顯示我參與的專案
+  progressive_settings_hint: 預設。使用者在每次使用時可進行覆蓋。
+  label_progress: 進度
+  progressive_option_left: 左
+  progressive_option_right: 右
+  label_recent_projects: 最近查看的專案
