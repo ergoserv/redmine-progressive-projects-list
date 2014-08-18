@@ -4,7 +4,7 @@ layout: default
 
 Latest version 1.0.0 released 2013-12-18.
 
-One of the [5 Redmine Plugins that will change the way you work](http://it-consultis.com/blog/5-redmine-plugins-will-change-way-work/) by [Thomas Guillemaud](http://it-consultis.com/author/thomas/).
+One of the [5 Redmine Plugins that will change the way you work](http://it-consultis.com/blog/5-redmine-plugins-will-change-way-work/)!
 
 Features
 --------
