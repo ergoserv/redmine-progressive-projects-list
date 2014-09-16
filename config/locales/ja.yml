@@ -1,0 +1,11 @@
+ja:
+  setting_show_project_description: プロジェクトの説明を表示
+  setting_show_project_progress: プロジェクトの進捗を表示
+  setting_show_project_progress_overview: プロジェクトの概要を表示
+  setting_show_project_menu: プロジェクトのメニューを表示
+  setting_show_only_for_my_projects: 自分のプロジェクトのみ表示
+  progressive_settings_hint: デフォルト設定。ユーザはセッションごとに設定を上書きできます。
+  label_progress: 進捗 
+  progressive_option_left: 左側 
+  progressive_option_right: 右側
+  label_recent_projects: 最近表示したプロジェクト
