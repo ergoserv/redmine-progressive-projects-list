@@ -6,6 +6,8 @@ Latest version 1.0.0 released 2013-12-18.
 
 One of the [5 Redmine Plugins that will change the way you work](http://it-consultis.com/blog/5-redmine-plugins-will-change-way-work/)!
 
+[![Rate at redmine.org](http://img.shields.io/badge/rate%20at-redmine.org-blue.svg?style=flat)](http://www.redmine.org/plugins/progressive-projects-list)
+
 Features
 --------
 
