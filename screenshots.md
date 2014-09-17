@@ -4,6 +4,7 @@ layout: default
 
 Screenshots
 -----------
+
 ### Projects list showing overall projects status with progress bars
 ![Projects list showing overall projects status with progress bars](images/screenshots/v020/progressive-projects-list-v020-progress.png)
 
