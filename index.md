@@ -17,7 +17,7 @@ Features
 - Show due date of the projects and versions
 - Recently viewed projects sidebar block
 - Configurable: admin set default settings, user may override them per session
-- Translated into 7 languages: English, German, French, Italian, Simplified Chinese, Russian, Ukrainian.
+- Translated into 10 languages: English, German, French, Italian, Traitional and Simplified Chinese, Japanese, Russian, Ukrainian, Polish.
 
 
 Screenshots
@@ -37,7 +37,7 @@ Other installation instructions are generic and can be found at [Redmine Plugins
 
 ### Compatibility ###
 
-- Remine 3 - [version 2.0.0](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v2.0.0) and branch [master](https://github.com/stgeneral/redmine-progressive-projects-list/tree/master).
+- Remine 2.3 .. 3.0 - [version 2.0.1](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v2.0.1) and branch [master](https://github.com/stgeneral/redmine-progressive-projects-list/tree/master).
 - Redmine 2.1 .. 2.6 - [version 1.1.0](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v1.1.0) and branch [version-1](https://github.com/stgeneral/redmine-progressive-projects-list/tree/version-1).
 - ChiliProject 3.4 - [version 0.5.1](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v0.5.1) and branch [version-0](https://github.com/stgeneral/redmine-progressive-projects-list/tree/version-0).
 
