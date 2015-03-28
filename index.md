@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Latest version 1.0.0 released 2013-12-18.
+Latest version 2.0.0 released 2015-03-28.
 
 One of the [5 Redmine Plugins that will change the way you work](http://it-consultis.com/blog/5-redmine-plugins-will-change-way-work/)!
 
@@ -35,8 +35,11 @@ Installation notes
 Plugin's directory should be named `progressive_projects_list` exactly.
 Other installation instructions are generic and can be found at [Redmine Plugins page](http://www.redmine.org/projects/redmine/wiki/Plugins).
 
-Compatible with Redmine 2.5, 2.4, 2.3, 2.2, 2.1.
-For ChiliProject 3.4 use [version 0.5.1](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v0.5.1).
+### Compatibility ###
+
+- Remine 3 - [version 2.0.0](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v2.0.0) and branch [master](https://github.com/stgeneral/redmine-progressive-projects-list/tree/master).
+- Redmine 2.1 .. 2.6 - [version 1.1.0](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v1.1.0) and branch [version-1](https://github.com/stgeneral/redmine-progressive-projects-list/tree/version-1).
+- ChiliProject 3.4 - [version 0.5.1](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v0.5.1) and branch [version-0](https://github.com/stgeneral/redmine-progressive-projects-list/tree/version-0).
 
 
 Other Proressive plugins for Redmine
