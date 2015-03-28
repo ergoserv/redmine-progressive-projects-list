@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Latest version 2.0.0 released 2015-03-28.
+Latest version 2.0.1 released 2015-03-28.
 
 One of the [5 Redmine Plugins that will change the way you work](http://it-consultis.com/blog/5-redmine-plugins-will-change-way-work/)!
 
