@@ -52,7 +52,7 @@ module Progressive::ProjectDecorator
     @opened_due_date ||= [
      issues.open.maximum('due_date'),
      shared_versions.maximum('effective_date'),
-     Issue.fixed_version(shared_versions).maximum('due_date')
+     Issue.open.fixed_version(shared_versions).maximum('due_date')
     ].compact.max
   end
 end
