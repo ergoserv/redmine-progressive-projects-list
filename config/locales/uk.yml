@@ -4,6 +4,7 @@ uk:
   setting_show_project_progress_overview: Показувати прогрес на сторіниці проекту
   setting_show_project_menu: Показувати меню проектів
   setting_show_only_for_my_projects: Показуваты тілки для моїх проектів
+  setting_show_recent_projects: Показуваты 'Недавно переглянуті'
   progressive_settings_hint: Налаштування за умовчанням. Користувачі мають можливість змінюваты їх на час сесії
   label_progress: Прогрес
   progressive_option_left: Ліворуч

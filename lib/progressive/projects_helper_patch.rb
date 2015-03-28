@@ -2,21 +2,6 @@ module Progressive::ProjectsHelperPatch
   def self.included(base) # :nodoc:
     base.class_eval do
 
-      def progressive_setting(key)
-        if request.params[:progressive]
-          session[:progressive] = true
-          session[key] = request.params[key]
-        elsif session[:progressive]
-          session[key]
-        else
-          Setting.plugin_progressive_projects_list[key.to_s]
-        end
-      end
-
-      def progressive_setting?(key)
-        progressive_setting(key).present?
-      end
-
       def render_project_hierarchy_with_progress_bars(projects)
         render_project_nested_lists(projects) do |project|
           s = link_to_project(project, {}, :class => "#{project.css_classes} #{User.current.member_of?(project) ? 'my-project' : nil}")

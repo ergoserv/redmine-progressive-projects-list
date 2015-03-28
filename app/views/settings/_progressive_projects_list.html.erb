@@ -25,4 +25,8 @@
 				[l(:progressive_option_right), 'right']],
 			@settings['show_project_progress_overview'])) %>
 	</p>
+	<p>
+		<%= setting_label(:show_recent_projects) %>
+		<%= check_box_tag('settings[show_recent_projects]', true, @settings['show_recent_projects']) %>
+	</p>
 </div>
