@@ -36,7 +36,7 @@ module Progressive::ProjectDecorator
     end
   end
 
-  # Cloned from Version#completed_pourcent
+  # Cloned from Version#completed_percent
   def issues_completed_percent
     if issues.count == 0
       0
