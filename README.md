@@ -17,7 +17,7 @@ Features
 - Show due date of the projects and versions
 - Recently viewed projects sidebar block
 - Configurable: admin set default settings, user may override them per session
-- Translated into 10 languages: English, German, French, Italian, Traitional and Simplified Chinese, Japanese, Russian, Ukrainian, Polish.
+- Translated into 11 languages: English, German, French, Italian, Spanish, Traitional and Simplified Chinese, Japanese, Russian, Ukrainian, Polish.
 
 ![Progressive Projects List Screenshot](http://stgeneral.github.io/redmine-progressive-projects-list/images/screenshots/v020/progressive-projects-list-v020-progress.png)
 
