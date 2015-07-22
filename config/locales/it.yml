@@ -4,6 +4,7 @@ it:
   setting_show_project_progress_overview: Mostra l'avanzamento nella vista di riepilogo
   setting_show_project_menu: Mostra il menu progetti
   setting_show_only_for_my_projects: Mostra solo per i miei progetti
+  setting_show_recent_projects: Mostra 'progetti visti di recente'
   progressive_settings_hint: Impostazioni di default. Gli utenti possono modificarle per una sessione
   label_progress: Avanzamento
   progressive_option_left: Sinistra
