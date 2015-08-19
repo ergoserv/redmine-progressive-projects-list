@@ -27,9 +27,8 @@ module Progressive::ProjectDecorator
       if issues.count > 0
         ratio = open ? 'done_ratio' : 100
 
-        done = issues.sum("COALESCE(CASE WHEN estimated_hours > 0 THEN estimated_hours ELSE NULL END, #{estimated_average}) * #{ratio}",
-                                  :joins => :status,
-                                  :conditions => ["#{IssueStatus.table_name}.is_closed = ?", !open]).to_f
+        done = issues.joins(:status).where("#{IssueStatus.table_name}.is_closed=?",!open)
+                   .sum("COALESCE(CASE WHEN estimated_hours > 0 THEN estimated_hours ELSE NULL END, #{estimated_average}) * #{ratio}").to_f
         progress = done / (estimated_average * issues.count)
       end
       progress
