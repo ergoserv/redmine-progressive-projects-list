@@ -1,1 +1,1 @@
-Source code of the http://stgeneral.github.com/redmine-progressive-projects-list/.
+Source code of the http://stgeneral.github.io/redmine-progressive-projects-list/.
