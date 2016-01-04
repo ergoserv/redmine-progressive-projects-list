@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Latest version 3.0.0 released 2016-01-04.
+Latest version 3.0.0 released on January 4, 2016.
 
 One of the [5 Redmine Plugins that will change the way you work](http://it-consultis.com/blog/5-redmine-plugins-will-change-way-work/)!
 
@@ -49,4 +49,4 @@ Proressive Plugins for Redmine
 * [Progressive Projects List](http://stgeneral.github.io/redmine-progressive-projects-list/) - overall projects status on one page.
 * [Progressive Redmine Theme](http://stgeneral.github.io/redmine-progressive-theme/) - extends default theme with some nice features.
 * [Progressive Gantt Mods](http://stgeneral.github.io/redmine-progressive-gantt-mods/) - assignee column and some preferences for Gantt chart.
-* [Collapsed Journals Plugin](https://github.com/stgeneral/redmine-collapsed-journals) - collapses issue history items without an assosiated note
+* [Collapsed Journals Plugin](https://github.com/stgeneral/redmine-collapsed-journals) - collapses issue history items without an assosiated note.
