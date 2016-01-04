@@ -36,12 +36,13 @@ Generic instructions for installing/uninstalling plugins can be found at [Redmin
 
 ### Compatibility ###
 
-- Redmine 2.3 .. 3.0 - [version 2.0.1](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v2.0.1) and branch [master](https://github.com/stgeneral/redmine-progressive-projects-list/tree/master).
+- Redmine 3.0 .. 3.2 - [version 3.0.0](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v3.0.0) and branch [master](https://github.com/stgeneral/redmine-progressive-projects-list/tree/master).
+- Redmine 2.3 .. 3.0 - [version 2.0.1](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v2.0.1).
 - Redmine 2.1 .. 2.6 - [version 1.1.0](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v1.1.0) and branch [version-1](https://github.com/stgeneral/redmine-progressive-projects-list/tree/version-1).
 - ChiliProject 3.4 - [version 0.5.1](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v0.5.1) and branch [version-0](https://github.com/stgeneral/redmine-progressive-projects-list/tree/version-0).
 
-Other Proressive plugins for Redmine
-------------------------------------
+Proressive plugins for Redmine
+------------------------------
 
 * [Progressive Projects List](http://stgeneral.github.io/redmine-progressive-projects-list/) - overall projects status on one page.
 * [Progressive Redmine Theme](http://stgeneral.github.io/redmine-progressive-theme/) - extends default theme with some nice features.
