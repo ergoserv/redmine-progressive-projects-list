@@ -13,3 +13,15 @@ time.progressive-overdue {
 div.child a.project {
 	font-weight: bold;
 }
+
+div#projects-index table.progress {
+       width: 40em;
+}
+
+div.progressive-overview table.progress {
+       width: 80%;
+}
+
+.progressive-project-version {
+       clear: both;
+}
