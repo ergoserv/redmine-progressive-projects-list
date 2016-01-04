@@ -1,7 +1,5 @@
-# Simplified Chinese strings go here for Rails i18n
+# Simplified Chinese
 # Author: Steven.W
-# Based on file: en.yml
-
 zh:
   setting_show_project_description: 显示项目描述
   setting_show_project_progress: 显示项目进度
