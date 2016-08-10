@@ -1,6 +1,8 @@
 Progressive Projects List
 =========================
 
+[![Join the chat at https://gitter.im/stgeneral/redmine-progressive-projects-list](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/stgeneral/redmine-progressive-projects-list?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Rate at redmine.org](http://img.shields.io/badge/rate%20at-redmine.org-blue.svg?style=flat)](http://www.redmine.org/plugins/progressive-projects-list)
 
 Plugin loads [Redmine](http://www.redmine.org/)'s projects list with overall projects status.
