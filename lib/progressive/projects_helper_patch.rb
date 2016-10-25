@@ -24,7 +24,10 @@ module Progressive::ProjectsHelperPatch
       def render_project_progress_bars(project)
         project.extend(Progressive::ProjectDecorator)
         s = ''
-        if project.issues.open.any?
+        # If the project has or does not have issues the progress bar is shown
+        # If project.issues.count > 0 the progress bar is shown only if you have issues open or closed
+        # if project.issues.open.any? the progress bar is shown only if you have open issues
+        if project.issues.count >= 0
           s << '<div class="progressive-project-issues">' + l(:label_issue_plural) + ': ' +
             link_to(l(:label_x_open_issues_abbr, :count => project.issues.open.count), :controller => 'issues', :action => 'index', :project_id => project, :set_filter => 1) +
             " <small>(" + l(:label_total) + ": #{project.issues.count})</small> "
@@ -32,8 +35,10 @@ module Progressive::ProjectsHelperPatch
           s << "</div>"
           s << progress_bar([project.issues_closed_percent, project.issues_completed_percent], :width => '30em', :legend => '%0.0f%' % project.issues_closed_percent)
         end
-
-        if project.versions.open.any?
+        # If the project has or does not have issues the progress bar is shown
+        # If project.issues.count > 0 the progress bar is shown only if you have issues open or closed
+        # if project.issues.open.any? the progress bar is shown only if you have open issues
+        if project.versions.count >= 0
           s << '<div class="progressive-project-version">'
           project.versions.open.reverse_each do |version|
             next if version.completed?
