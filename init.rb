@@ -6,23 +6,22 @@ Redmine::Plugin.register :progressive_projects_list do
   name 'Progressive Projects List plugin'
   author 'Dmitry Babenko'
   description 'Projects List with menus and progress bars.'
-  version '3.0.1'
+  version '1.0.0'
   url 'http://stgeneral.github.io/redmine-progressive-projects-list/'
   author_url 'https://github.com/stgeneral'
-  requires_redmine :version_or_higher => '3.0'
+  requires_redmine :version_or_higher => '2.1.0'
 
   settings :default => {
     'show_project_description'  => false,
     'show_project_progress'     => true,
     'show_project_menu'         => false,
     'show_only_for_my_projects' => false,
-    'show_recent_projects'      => true,
-    'show_project_progress_overview' => ''
+    'show_project_progress_overview' => '',
+    'ignore_hours' => false
   }, :partial => 'settings/progressive_projects_list'
 end
 
 require 'progressive_projects_list'
-require 'progressive/application_helper_patch'
 require 'progressive/projects_helper_patch'
 require 'progressive/projects_list_view_listener'
 require 'progressive/recent_projects_view_listener'

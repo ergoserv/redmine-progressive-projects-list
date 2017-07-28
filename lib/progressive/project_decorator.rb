@@ -24,25 +24,35 @@ module Progressive::ProjectDecorator
     @issues_progress ||= {}
     @issues_progress[open] ||= begin
       progress = 0
-      if issues.count > 0
-        ratio = open ? 'done_ratio' : 100
+      if Setting.plugin_progressive_projects_list['ignore_hours']
+        progress = 100 * (issues.count - issues.open.count) / (issues.count)
+        puts progress
+      else
+        if issues.count > 0
+          ratio = open ? 'done_ratio' : 100
 
-        done = issues.joins(:status).where("#{IssueStatus.table_name}.is_closed=?",!open)
-                   .sum("COALESCE(CASE WHEN estimated_hours > 0 THEN estimated_hours ELSE NULL END, #{estimated_average}) * #{ratio}").to_f
-        progress = done / (estimated_average * issues.count)
+          done = issues.sum("COALESCE(CASE WHEN estimated_hours > 0 THEN estimated_hours ELSE NULL END, #{estimated_average}) * #{ratio}",
+                                    :joins => :status,
+                                    :conditions => ["#{IssueStatus.table_name}.is_closed = ?", !open]).to_f
+          progress = done / (estimated_average * issues.count)
+        end
       end
       progress
     end
   end
 
-  # Cloned from Version#completed_percent
+  # Cloned from Version#completed_pourcent
   def issues_completed_percent
     if issues.count == 0
       0
     elsif issues.open.count == 0
       100
     else
-      issues_progress(false) + issues_progress(true)
+      if Setting.plugin_progressive_projects_list['ignore_hours']
+        issues_progress(true)
+      else
+        issues_progress(false) + issues_progress(true)
+      end
     end
   end
 
@@ -50,8 +60,8 @@ module Progressive::ProjectDecorator
   def opened_due_date
     @opened_due_date ||= [
      issues.open.maximum('due_date'),
-     shared_versions.open.maximum('effective_date'),
-     Issue.open.fixed_version(shared_versions.open).maximum('due_date')
+     shared_versions.maximum('effective_date'),
+     Issue.fixed_version(shared_versions).maximum('due_date')
     ].compact.max
   end
 end
