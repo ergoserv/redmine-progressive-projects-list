@@ -9,9 +9,9 @@
 	<%= check_box_tag :show_project_progress, 1, progressive_setting?(:show_project_progress) %>
 		<%= label_tag :show_project_progress, l(:setting_show_project_progress) %><br />
 	<%= check_box_tag :show_only_for_my_projects, 1, progressive_setting?(:show_only_for_my_projects) %>
-		<%= label_tag :show_only_for_my_projects, l(:setting_show_only_for_my_projects)  %><br />
-	<%= check_box_tag :show_recent_projects, 1, progressive_setting?(:show_recent_projects) %>
-		<%= label_tag :show_recent_projects, l(:setting_show_recent_projects)  %>
+		<%= label_tag :show_only_for_my_projects, l(:setting_show_only_for_my_projects)  %>
+	<%= check_box_tag :ignore_hours, 1, progressive_setting?(:ignore_hours) %>
+		<%= label_tag :ignore_hours, l(:setting_ignore_hours)  %>
 
 	<p><%= submit_tag l(:button_apply), :class => 'button-small', :name => nil %></p>
 	<% end %>
