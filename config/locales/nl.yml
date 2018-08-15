@@ -1,0 +1,12 @@
+nl:
+  setting_show_project_description: Projectbeschrijving tonen
+  setting_show_project_progress: Projectvoortgang tonen
+  setting_show_project_progress_overview: Projectvoortgang op overzichtspagina tonen
+  setting_show_project_menu: Projectmenu tonen
+  setting_show_only_for_my_projects: Alleen tonen voor mijn projecten
+  setting_show_recent_projects: Bekijk 'Recent bekeken projecten'
+  progressive_settings_hint: Standaardwaarde. Gebruikers kunnen deze overschrijven.
+  label_progress: Projectvoortgang
+  progressive_option_left: Links
+  progressive_option_right: Rechts
+  label_recent_projects: Recent bekeken projecten
