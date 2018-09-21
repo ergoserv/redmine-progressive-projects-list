@@ -6,6 +6,14 @@ ul.progressive-project-menu li {
 	margin-right: 10px;
 }
 
+ul.progressive-project-menu li ul.menu-children {
+  padding-left: 0;
+}
+
+ul.progressive-project-menu li a.new-object {
+  display: none;
+}
+
 time.progressive-overdue {
 	color: red;
 }
