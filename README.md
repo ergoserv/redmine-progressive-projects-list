@@ -16,8 +16,8 @@ Features
 - Quick links to issues, new issue, version, etc directly from the projects list
 - Show due date of the projects and versions
 - Recently viewed projects sidebar block
-- Configurable: admin set default settings, user may override them per session
-- Translated into 12 languages: English, German, French, Italian, Spanish, Portuguese, Traitional and Simplified Chinese, Japanese, Russian, Ukrainian, Polish.
+- Configurable: admin set default settings, a user may override them per session
+- Translated into 12 languages: English, German, French, Italian, Spanish, Portuguese, Traditional and Simplified Chinese, Japanese, Russian, Ukrainian, Polish.
 
 ![Progressive Projects List Screenshot](http://stgeneral.github.io/redmine-progressive-projects-list/images/screenshots/v020/progressive-projects-list-v020-progress.png)
 
@@ -41,8 +41,8 @@ Generic instructions for installing/uninstalling plugins can be found at [Redmin
 - Redmine 2.1 .. 2.6 - [version 1.1.0](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v1.1.0) and branch [version-1](https://github.com/stgeneral/redmine-progressive-projects-list/tree/version-1).
 - ChiliProject 3.4 - [version 0.5.1](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v0.5.1) and branch [version-0](https://github.com/stgeneral/redmine-progressive-projects-list/tree/version-0).
 
-Proressive plugins for Redmine
-------------------------------
+Progressive plugins for Redmine
+-------------------------------
 
 * [Progressive Projects List](http://stgeneral.github.io/redmine-progressive-projects-list/) - overall projects status on one page.
 * [Progressive Redmine Theme](http://stgeneral.github.io/redmine-progressive-theme/) - extends default theme with some nice features.
