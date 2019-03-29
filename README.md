@@ -26,8 +26,10 @@ Installation notes
 ------------------
 
 1. Download [latest release](https://github.com/stgeneral/redmine-progressive-projects-list/releases/latest) of the plugin.
-2. Extract it to `<redmine_path>/plugins`. You should get `<redmine_path>/plugins/progressive_projects_list` directory.
-3. Restart Redmine.
+2. Extract plugin's archive to `<redmine_path>/plugins`.
+3. Check or rename plugin's directory to `<redmine_path>/plugins/progressive_projects_list` directory.
+4. Restart Redmine.
+5. Enjoy!
 
 You should now be able to see the plugin list in _Administration -> Plugins_ and configure it.
 
