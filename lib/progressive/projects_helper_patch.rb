@@ -30,7 +30,7 @@ module Progressive::ProjectsHelperPatch
             " <small>(" + l(:label_total) + ": #{project.issues.count})</small> "
           s << due_date_tag(project.opened_due_date) if project.opened_due_date
           s << "</div>"
-          s << progress_bar([project.issues_closed_percent, project.issues_completed_percent], :width => '30em', :legend => '%0.0f%' % project.issues_closed_percent)
+          s << progress_bar([project.issues_closed_percent, project.issues_completed_percent], :width => '30em', :legend => '%0.0f%%' % project.issues_closed_percent)
         end
 
         if project.versions.open.any?
@@ -42,7 +42,7 @@ module Progressive::ProjectsHelperPatch
               "<small> / " + link_to_if(version.closed_issues_count > 0, l(:label_x_closed_issues_abbr, :count => version.closed_issues_count), :controller => 'issues', :action => 'index', :project_id => version.project, :status_id => 'c', :fixed_version_id => version, :set_filter => 1) + "</small>" + ". "
             s << due_date_tag(version.effective_date) if version.effective_date
             s << "<br>" +
-              progress_bar([version.closed_percent, version.completed_percent], :width => '30em', :legend => ('%0.0f%' % version.completed_percent))
+              progress_bar([version.closed_percent, version.completed_percent], :width => '30em', :legend => ('%0.0f%%' % version.completed_percent))
           end
           s << "</div>"
         end
