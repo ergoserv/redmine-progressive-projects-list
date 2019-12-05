@@ -1,9 +1,16 @@
 ul.projects ul.progressive-project-menu {
-	padding-left: 0;
+	padding: 1em 0em 1.5em 0em;
+	list-style: none;
 }
+
 ul.progressive-project-menu li {
 	float:left;
 	margin-right: 10px;
+	list-style: none;
+}
+
+div#projects-index ul.projects div.description {
+	padding-top: 1.5em;
 }
 
 time.progressive-overdue {
@@ -15,13 +22,18 @@ div.child a.project {
 }
 
 div#projects-index table.progress {
-       width: 40em;
+	width: 30em;
 }
 
 div.progressive-overview table.progress {
-       width: 80%;
+	width: 70%;
 }
 
 .progressive-project-version {
-       clear: both;
+	clear: both;
+}
+
+.new-object,
+.menu-children {
+	display: none;
 }
