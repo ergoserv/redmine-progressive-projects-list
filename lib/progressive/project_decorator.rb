@@ -1,6 +1,6 @@
 module Progressive::ProjectDecorator
   def issues_closed_percent
-    if issues.count.zero?
+    if issues.count == 0
       0
     else
       issues_progress(false)
@@ -11,7 +11,9 @@ module Progressive::ProjectDecorator
   def estimated_average
     if @estimated_average.nil?
       average = issues.average(:estimated_hours).to_f
-      average = 1 if average.zero?
+      if average == 0
+        average = 1
+      end
       @estimated_average = average
     end
     @estimated_average
@@ -35,9 +37,9 @@ module Progressive::ProjectDecorator
 
   # Cloned from Version#completed_percent
   def issues_completed_percent
-    if issues.count.zero?
+    if issues.count == 0
       0
-    elsif issues.open.count.zero?
+    elsif issues.open.count == 0
       100
     else
       issues_progress(false) + issues_progress(true)

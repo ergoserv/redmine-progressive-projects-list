@@ -9,7 +9,7 @@ Redmine::Plugin.register :progressive_projects_list do
   version '3.0.1'
   url 'http://stgeneral.github.io/redmine-progressive-projects-list/'
   author_url 'https://github.com/stgeneral'
-  requires_redmine version_or_higher: '3.0'
+  requires_redmine version_or_higher: '4.0'
 
   settings default: {
     'show_project_description'  => false,
