@@ -9,16 +9,16 @@ Redmine::Plugin.register :progressive_projects_list do
   version '3.0.1'
   url 'http://stgeneral.github.io/redmine-progressive-projects-list/'
   author_url 'https://github.com/stgeneral'
-  requires_redmine :version_or_higher => '3.0'
+  requires_redmine version_or_higher: '3.0'
 
-  settings :default => {
+  settings default: {
     'show_project_description'  => false,
     'show_project_progress'     => true,
     'show_project_menu'         => false,
     'show_only_for_my_projects' => false,
     'show_recent_projects'      => true,
     'show_project_progress_overview' => ''
-  }, :partial => 'settings/progressive_projects_list'
+  }, partial: 'settings/progressive_projects_list'
 end
 
 require 'progressive_projects_list'
