@@ -1,5 +1,5 @@
 <% if params[:action] == 'index' %>
-	<%= form_tag({}, :method => :get) do %>
+	<%= form_tag({}, method: :get) do %>
 	<h3><%= l(:label_preferences) %></h3>
 	<%= hidden_field_tag(:progressive, 1) %>
 	<%= check_box_tag :show_project_menu, 1, progressive_setting?(:show_project_menu) %>
@@ -13,10 +13,10 @@
 	<%= check_box_tag :show_recent_projects, 1, progressive_setting?(:show_recent_projects) %>
 		<%= label_tag :show_recent_projects, l(:setting_show_recent_projects)  %>
 
-	<p><%= submit_tag l(:button_apply), :class => 'button-small', :name => nil %></p>
+	<p><%= submit_tag l(:button_apply), class: 'button-small', name: nil %></p>
 	<% end %>
 <% elsif params[:action] == 'show' %>
-	<%= form_tag({}, :method => :get) do %>
+	<%= form_tag({}, method: :get) do %>
 	<h3><%= l(:label_preferences) %></h3>
 	<%= hidden_field_tag(:progressive, 1) %>
 	<%= select_tag(:show_project_progress_overview, options_for_select([
@@ -26,6 +26,6 @@
 		progressive_setting(:show_project_progress_overview))) %>
 	<%= label_tag :show_project_progress_overview, l(:setting_show_project_progress)  %>
 
-	<p><%= submit_tag l(:button_apply), :class => 'button-small', :name => nil %></p>
+	<p><%= submit_tag l(:button_apply), class: 'button-small', name: nil %></p>
 	<% end %>
 <% end %>

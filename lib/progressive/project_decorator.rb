@@ -27,8 +27,8 @@ module Progressive::ProjectDecorator
       if issues.count > 0
         ratio = open ? 'done_ratio' : 100
 
-        done = issues.joins(:status).where("#{IssueStatus.table_name}.is_closed=?",!open)
-                   .sum("COALESCE(CASE WHEN estimated_hours > 0 THEN estimated_hours ELSE NULL END, #{estimated_average}) * #{ratio}").to_f
+        done = issues.joins(:status).where("#{IssueStatus.table_name}.is_closed=?", !open)
+                     .sum("COALESCE(CASE WHEN estimated_hours > 0 THEN estimated_hours ELSE NULL END, #{estimated_average}) * #{ratio}").to_f
         progress = done / (estimated_average * issues.count)
       end
       progress
@@ -49,9 +49,9 @@ module Progressive::ProjectDecorator
   # The latest due date of an *open* issue or version
   def opened_due_date
     @opened_due_date ||= [
-     issues.open.maximum('due_date'),
-     shared_versions.open.maximum('effective_date'),
-     Issue.open.fixed_version(shared_versions.open).maximum('due_date')
+      issues.open.maximum('due_date'),
+      shared_versions.open.maximum('effective_date'),
+      Issue.open.fixed_version(shared_versions.open).maximum('due_date')
     ].compact.max
   end
 end
