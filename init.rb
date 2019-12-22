@@ -9,7 +9,7 @@ Redmine::Plugin.register :progressive_projects_list do
   version '4.0.0'
   url 'https://ergoserv.github.io/redmine-progressive-projects-list/'
   author_url 'https://github.com/ergoserv'
-  requires_redmine version_or_higher: '4.0'
+  requires_redmine version_or_higher: '3.3'
 
   settings default: {
     'show_project_description'  => false,
