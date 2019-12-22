@@ -24,7 +24,7 @@ module Progressive::ProjectsHelperPatch
       def render_project_progress_bars(project)
         project.extend(Progressive::ProjectDecorator)
         s = ''
-        if project.issues.open.any?
+        if project.issues.count >= 0
           s << '<div class="progressive-project-issues">' + l(:label_issue_plural) + ': ' +
             link_to(l(:label_x_open_issues_abbr, :count => project.issues.open.count), :controller => 'issues', :action => 'index', :project_id => project, :set_filter => 1) +
             " <small>(" + l(:label_total) + ": #{project.issues.count})</small> "
