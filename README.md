@@ -16,14 +16,14 @@ Features
 - Configurable: admin sets default settings, a user may override them per session
 - Translated into 13 languages: English, German, French, Italian, Spanish, Portuguese, Dutch, Traditional and Simplified Chinese, Japanese, Russian, Ukrainian, Polish.
 
-![Progressive Projects List Screenshot](http://stgeneral.github.io/redmine-progressive-projects-list/images/screenshots/v020/progressive-projects-list-v020-progress.png)
+![Progressive Projects List Screenshot](http://ergoserv.github.io/redmine-progressive-projects-list/images/screenshots/v020/progressive-projects-list-v020-progress.png)
 
-More details and screenshots - http://stgeneral.github.io/redmine-progressive-projects-list.
+More details and screenshots - http://ergoserv.github.io/redmine-progressive-projects-list.
 
 Installation notes
 ------------------
 
-1. Download [latest release](https://github.com/stgeneral/redmine-progressive-projects-list/releases/latest) of the plugin.
+1. Download [latest release](https://github.com/ergoserv/redmine-progressive-projects-list/releases/latest) of the plugin.
 2. Extract plugin's archive to `<redmine_path>/plugins`.
 3. Check or rename plugin's directory to `<redmine_path>/plugins/progressive_projects_list` directory.
 4. Restart Redmine.
@@ -35,10 +35,11 @@ Generic instructions for installing/uninstalling plugins can be found at [Redmin
 
 ### Compatibility ###
 
-- Redmine 3.0 .. 3.2 - [version 3.0.1](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v3.0.1) and branch [master](https://github.com/stgeneral/redmine-progressive-projects-list/tree/master).
-- Redmine 2.3 .. 3.0 - [version 2.0.1](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v2.0.1).
-- Redmine 2.1 .. 2.6 - [version 1.1.0](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v1.1.0) and branch [version-1](https://github.com/stgeneral/redmine-progressive-projects-list/tree/version-1).
-- ChiliProject 3.4 - [version 0.5.1](https://github.com/stgeneral/redmine-progressive-projects-list/releases/tag/v0.5.1) and branch [version-0](https://github.com/stgeneral/redmine-progressive-projects-list/tree/version-0).
+- Redmine 3.2 .. 4.1 - [version 4.0.0](https://github.com/ergoserv/redmine-progressive-projects-list/releases/tag/v4.0.0) and branch [master](https://github.com/ergoserv/redmine-progressive-projects-list/tree/master).
+- Redmine 3.0 .. 3.2 - [version 3.0.1](https://github.com/ergoserv/redmine-progressive-projects-list/releases/tag/v3.0.1).
+- Redmine 2.3 .. 3.0 - [version 2.0.1](https://github.com/ergoserv/redmine-progressive-projects-list/releases/tag/v2.0.1).
+- Redmine 2.1 .. 2.6 - [version 1.1.0](https://github.com/ergoserv/redmine-progressive-projects-list/releases/tag/v1.1.0) and branch [version-1](https://github.com/ergoserv/redmine-progressive-projects-list/tree/version-1).
+- ChiliProject 3.4 - [version 0.5.1](https://github.com/ergoserv/redmine-progressive-projects-list/releases/tag/v0.5.1) and branch [version-0](https://github.com/ergoserv/redmine-progressive-projects-list/tree/version-0).
 
 Progressive plugins for Redmine
 -------------------------------
