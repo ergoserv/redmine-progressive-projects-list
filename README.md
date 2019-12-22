@@ -13,7 +13,7 @@ Features
 - Quick links to issues, new issue, version, etc directly from the projects list
 - Show due date of the projects and versions
 - Recently viewed projects sidebar block
-- Configurable: admin set default settings, a user may override them per session
+- Configurable: admin sets default settings, a user may override them per session
 - Translated into 13 languages: English, German, French, Italian, Spanish, Portuguese, Dutch, Traditional and Simplified Chinese, Japanese, Russian, Ukrainian, Polish.
 
 ![Progressive Projects List Screenshot](http://stgeneral.github.io/redmine-progressive-projects-list/images/screenshots/v020/progressive-projects-list-v020-progress.png)
@@ -53,10 +53,14 @@ License
 
 *The MIT License (MIT)*
 
-Copyright (c) 2012-2018 Dmitry Babenko
+Copyright (c) 2012-2020 Dmitry Babenko
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The plugin is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-------------------------------------------------------------------------------
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+[![alt text](https://raw.githubusercontent.com/ergoserv/auxiliary_rails/master/assets/ErgoServ_horizontalColor@sign+text+bg.png "ErgoServ - Web and Mobile Development Company")](https://www.ergoserv.com)
+
+This Redmine plugin was created and is maintained by [ErgoServ](https://www.ergoserv.com).
+
+If you like what you see and would like to hire us or join us, [get in touch](https://www.ergoserv.com)!
