@@ -33,7 +33,7 @@ module Progressive::ProjectsHelperPatch
           s << progress_bar([project.issues_closed_percent, project.issues_completed_percent], :width => '30em', :legend => '%0.0f%%' % project.issues_closed_percent)
         end
 
-        if project.versions.count >= 0
+        if project.versions.open.any?
           s << '<div class="progressive-project-version">'
           project.versions.open.reverse_each do |version|
             next if version.completed?
